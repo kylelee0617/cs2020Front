@@ -1,0 +1,15 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link tabMenu active" id="pills-notice-tab" go="payNotice/notice.html" data-toggle="pill" href="#pills-notice" role="tab" aria-controls="pills-profileCustContent" aria-selected="true">列印收款單</a></li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane tabContent fade show active" id="pills-notice" role="tabpanel" aria-labelledby="pills-notice-tab">載入中......</div>
+</div>
+
+<script>
+    $(function() {
+        funcName = "payNotice";
+        updBread(funcName);
+        funcInit();
+    });
+</script>

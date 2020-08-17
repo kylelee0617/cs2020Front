@@ -1,0 +1,80 @@
+<div class="row mb-4 pl-2">
+    <div class="col-2">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">工程代號(案號)</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+    </div>
+    <div class="col-2">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">客戶代號(戶號)</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+    </div>
+    <div class="col-2">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">合約號碼</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+    </div>
+    <div class="col-4">
+        <button type="button" class="btn btn-primary">查詢</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2">
+        <div class="nav flex-column nav-pills" id="tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link custMenu active" id="tab_profileCust" data-toggle="pill" href="#profileCustContent" role="tab" aria-controls="profileCustContent" aria-selected="true">基本資料</a>
+            <a class="nav-link custMenu" id="tab_profileHouseCar" data-toggle="pill" href="#profileHouseCarContent" role="tab" aria-controls="profileHouseCarContent" aria-selected="false">房屋、車位</a>
+            <a class="nav-link custMenu" id="tab_message" data-toggle="pill" href="#messagesContent" role="tab" aria-controls="messagesContent" aria-selected="false">特約、備註</a>
+            <a class="nav-link custMenu" id="tab_houseCash" data-toggle="pill" href="#houseCashContent" role="tab" aria-controls="houseCashContent" aria-selected="false">房屋款</a>
+            <a class="nav-link custMenu" id="tab_landCash" data-toggle="pill" href="#landCashContent" role="tab" aria-controls="landCashContent" aria-selected="false">土地款</a>
+            <a class="nav-link custMenu" id="tab_carCash" data-toggle="pill" href="#carCashContent" role="tab" aria-controls="carCashContent" aria-selected="false">車位款</a>
+            <!-- <a class="nav-link custMenu" id="tab_amlCust" data-toggle="pill" href="#amlCustContent" role="tab" aria-controls="amlCustContent" aria-selected="false">洗防個人</a>
+            <a class="nav-link custMenu" id="tab_amlCom" data-toggle="pill" href="#amlComContent" role="tab" aria-controls="amlComContent" aria-selected="false">洗防法人</a> -->
+        </div>
+    </div>
+    <div class="col-10">
+        <div class="tab-content" id="tabContent">
+            <div class="tab-pane custMenuTabContent fade show active" id="profileCustContent" role="tabpanel" aria-labelledby="tab_profileCust">購買人資料</div>
+            <div class="tab-pane custMenuTabContent fade" id="profileHouseCarContent" role="tabpanel" aria-labelledby="tab_profileHouseCar">房車位資</div>
+            <div class="tab-pane custMenuTabContent fade" id="messagesContent" role="tabpanel" aria-labelledby="tab_message">特備</div>
+            <div class="tab-pane custMenuTabContent fade" id="houseCashContent" role="tabpanel" aria-labelledby="tab_houseCash">房屋</div>
+            <div class="tab-pane custMenuTabContent fade" id="landCashContent" role="tabpanel" aria-labelledby="tab_landCash">土地</div>
+            <div class="tab-pane custMenuTabContent fade" id="carCashContent" role="tabpanel" aria-labelledby="tab_carCash">車位</div>
+            <!-- <div class="tab-pane custMenuTabContent fade" id="amlCustContent" role="tabpanel" aria-labelledby="tab_amlCust">法個</div>
+            <div class="tab-pane custMenuTabContent fade" id="amlComContent" role="tabpanel" aria-labelledby="tab_amlCom">法法</div> -->
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function() {
+        var custDataTag = localStorage.getItem("custDataTag");
+        if (custDataTag == null || custDataTag == "") {
+            $("#profileCustContent").load("profileCustContent.html"); //基本資料
+        } else {
+            //受選內容資料
+            // $(".custMenuTabContent").empty(); //清空其他內容
+            $("#" + custDataTag).load(custDataTag + ".html"); //載入對應的內容
+
+            //選定menu
+            $("[aria-controls='" + custDataTag + "']").click();
+        }
+
+        $(".custMenu").click(function() {
+            let ctrl = $(this).attr("aria-controls");
+            $(".custMenuTabContent").empty(); //清空其他
+            $("#" + ctrl).load(ctrl + ".html"); //載入對應的內容
+            localStorage.setItem("custDataTag", ctrl);
+        });
+
+    });
+</script>

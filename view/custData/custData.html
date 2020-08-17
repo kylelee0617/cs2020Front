@@ -1,0 +1,57 @@
+<div class="row mb-4 pl-2">
+    <div class="col-md-2">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">工程代號</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-3">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">客戶代號</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+    </div>
+    <div class="col-2">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">合約號碼</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+    </div>
+    <div class="col-4">
+        <button type="button" class="btn btn-primary">查詢</button> &nbsp;
+        <button type="button" class="btn btn-primary">從合約會審同步</button>
+    </div>
+</div>
+
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link tabMenu active" id="pills-profileCustContent-tab" go="custData/profileCustContent.html" data-toggle="pill" href="#pills-profileCustContent" role="tab" aria-controls="pills-profileCustContent" aria-selected="true">基本資料</a></li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link tabMenu" id="pills-profileHouseCarContent-tab" go="custData/profileHouseCarContent.html" data-toggle="pill" href="#pills-profileHouseCarContent" role="tab" aria-controls="pills-profileHouseCarContent" aria-selected="false">房屋、車位</a></li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link tabMenu" id="pills-messagesContent-tab" go="custData/messagesContent.html" data-toggle="pill" href="#pills-messagesContent" role="tab" aria-controls="pills-messagesContent" aria-selected="false">特約、備註</a></li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link tabMenu" id="pills-houseCashContent-tab" go="custData/houseCashContent.html" data-toggle="pill" href="#pills-houseCashContent" role="tab" aria-controls="pills-houseCashContent" aria-selected="false">房屋款</a></li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link tabMenu" id="pills-landCashContent-tab" go="custData/landCashContent.html" data-toggle="pill" href="#pills-landCashContent" role="tab" aria-controls="pills-landCashContent" aria-selected="false">土地款</a></li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link tabMenu" id="pills-carCashContent-tab" go="custData/carCashContent.html" data-toggle="pill" href="#pills-carCashContent" role="tab" aria-controls="pills-carCashContent" aria-selected="false">車位款</a></li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane tabContent fade show active" id="pills-profileCustContent" role="tabpanel" aria-labelledby="pills-profileCustContent-tab">載入中......</div>
+</div>
+
+<script>
+    $(function() {
+        funcName = "custData";
+        updBread(funcName);
+        funcInit();
+
+    });
+</script>

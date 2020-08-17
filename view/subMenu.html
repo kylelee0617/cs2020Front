@@ -1,0 +1,148 @@
+<!-- subNav -->
+<link href="../css/bootstrap-4-navbar.css" rel="stylesheet">
+<script src="../js/bootstrap-4-navbar.js"></script>
+
+<nav id="navBarMain" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav full-width-div">
+            <!-- 第一層 -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">首頁 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">基本資料建立</a>
+                <!-- 第二層 -->
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li>
+                        <a class="dropdown-item dropdown-toggle" href="#">基本資料建立</a>
+                        <!-- 第三層 -->
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">常用代號建立</a></li>
+                            <li><a class="dropdown-item" href="#">工程代號建立</a></li>
+                            <li><a class="dropdown-item" href="./custData/custData.html" onclick="return false;">客戶資料建檔</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-item dropdown-toggle" href="#">基本資料報表</a>
+                        <!-- 第三層 -->
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">常用代號清冊</a></li>
+                            <li><a class="dropdown-item" href="#">客戶資料清冊</a></li>
+                            <li><a class="dropdown-item" href="#">客戶資料卡</a></li>
+                            <li><a class="dropdown-item" href="#">車位資料表</a></li>
+                            <li><a class="dropdown-item" href="#">列印客戶標籤</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-item dropdown-toggle" href="#">名義人變更作業</a>
+                        <!-- 第三層 -->
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">客戶繳款明細表</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">繳款作業</a>
+                <!-- 第二層 -->
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li>
+                        <a class="dropdown-item dropdown-toggle" href="#">繳款作業</a>
+                        <!-- 第三層 -->
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">付款程式解除</a></li>
+                            <li><a class="dropdown-item" href="#">客戶繳款資料查詢</a></li>
+                            <li><a class="dropdown-item" href="#">委外繳款通知單轉檔</a></li>
+                            <li><a class="dropdown-item" href="./payNotice/payNotice.html" onclick="return false;">列印繳款通知單</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-item dropdown-toggle" href="#">催繳作業</a>
+                        <!-- 第三層 -->
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">催繳明細表</a></li>
+                            <li><a class="dropdown-item" href="#">委外繳款通知單轉檔</a></li>
+                            <li><a class="dropdown-item" href="#">列印繳款通知單(Excel)</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-item dropdown-toggle" href="#">收款作業</a>
+                        <!-- 第三層 -->
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="getMoney/getMoney.html" onclick="return false;">金融機構(預計更名-收款)</a></li>
+                            <li><a class="dropdown-item" href="#">自行繳款(預計廢棄)</a></li>
+                            <li><a class="dropdown-item" href="#">產生發票(預計廢棄)</a></li>
+                            <li><a class="dropdown-item" href="#">收款單列印(XP)</a></li>
+                            <li><a class="dropdown-item" href="#">金融機構代收款日報表</a></li>
+                            <li><a class="dropdown-item" href="#">副聯清單</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-item dropdown-toggle" href="#">工變處理</a>
+                        <!-- 第三層 -->
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">工變項目維護作業</a></li>
+                            <li><a class="dropdown-item" href="#">工程變更處理</a></li>
+                            <li><a class="dropdown-item" href="#">工程變更報表</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-item dropdown-toggle" href="#">特殊作業</a>
+                        <!-- 第三層 -->
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="return false;">訂金繳款資料轉入(假入帳)(預計更名-訂金明細)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">統計報表</a>
+                <!-- 第二層 -->
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li>
+                        <a class="dropdown-item dropdown-toggle" href="#">各類報表</a>
+                        <!-- 第三層 -->
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">房屋付款總表</a></li>
+                            <li><a class="dropdown-item" href="#">房屋付款明細表</a></li>
+                            <li><a class="dropdown-item" href="#">轉檔報表</a></li>
+                            <li><a class="dropdown-item" href="#">轉檔預收費用報表</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">其他作業</a>
+                <!-- 第二層 -->
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li>
+                        <a class="dropdown-item dropdown-toggle" href="#">對保作業</a>
+                        <!-- 第三層 -->
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">對保作業處理(各對象調整)</a></li>
+                            <li><a class="dropdown-item" href="#">對保作業完成確認調整)</a></li>
+                            <li><a class="dropdown-item" href="#">列印對保通知單(預收費用明細表)</a></li>
+                            <li><a class="dropdown-item" href="#">列印繳款通知單(代收款excel)</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-item dropdown-toggle" href="#">銀貸交屋處理</a>
+                        <!-- 第三層 -->
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">交屋狀況明細表</a></li>
+                            <li><a class="dropdown-item" href="#">交屋確認處理</a></li>
+                            <li><a class="dropdown-item" href="#">交屋明細表更新版</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-item dropdown-toggle" href="#">解約處理</a>
+                        <!-- 第三層 -->
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">解約處理</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>

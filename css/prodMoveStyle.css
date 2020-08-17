@@ -1,0 +1,16 @@
+.fly-item,
+.fly-item > img {
+    position: absolute;
+    width: 50px; height: 50px;
+    transition: transform .5s;
+}
+.fly-item {
+    display: none;
+    margin: -25px 0 0 -25px;
+    transition-timing-function: linear;
+    opacity: 1;
+}
+.fly-item > img {
+    transition-timing-function: cubic-bezier(.55,0,.85,.36);
+    outline: 1px solid rgb(221,46,59);
+}
